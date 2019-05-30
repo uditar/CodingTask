@@ -1,0 +1,45 @@
+﻿@model MyApp.Models.ToDoModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h3>Details of task</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Task_Description)*@
+            @Html.LabelFor(model => model.Task_Description, "Description")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Task_Description)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Is_Task_Complete)*@
+            @Html.LabelFor(model => model.Is_Task_Complete, "Complete")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_Task_Complete)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Due_In)*@
+            @Html.LabelFor(model => model.Due_In, "Due")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Due_In)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Task_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
